@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Goodreads to Anna's Archive",
-  "description": "Add a button to Goodreads pages to search the book on Anna's Archive.",
+  "name": "Goodreads Downloader",
+  "description": "Add a button to Goodreads pages to search the book on Anna's Archive and Z-lib.",
   "version": "1.0",
   "permissions": [
     "activeTab"
