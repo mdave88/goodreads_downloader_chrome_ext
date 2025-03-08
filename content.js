@@ -15,7 +15,7 @@ function getJSONLDData() {
 
 const bookData = getJSONLDData();
 if (bookData) {
-    const title = bookData.name;
+    const title = bookData.name.toLowerCase();
     const author = bookData.author && bookData.author[0] ? bookData.author[0].name : null;
 
     if (title && author) {
@@ -38,6 +38,7 @@ if (bookData) {
 			window.open(`https://annas-archive.org/search?index=&page=1&q=${encodeURIComponent(`${title} ${author}`)}&display=&sort=`, '_blank');
 			window.open(`https://z-lib.id/s?q=${encodeURIComponent(`${title}`)}`, '_blank');
 			window.open(`https://z-lib.io/s/${encodeURIComponent(`${title}`)}`, '_blank');
+			window.open(`https://audiobookbay.lu/?s=${encodeURIComponent(`${title}`)}`, '_blank');
 		});
     } else {
         console.log('Could not find title or author in the JSON-LD.');
